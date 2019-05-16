@@ -40,9 +40,4 @@
 Finally email us with your link or zip file.
 
 <h2>Cronut acceptance widget</h2>
-<div class="challenge_box">
-  <%= label_tag 'terms_checkbox' do %>
-    <%= t '.super_terms_html', cronuts_url: @cronuts_url, donuts_url: @donuts_url %>
-  <% end %>
-  <%= check_box_tag 'terms_checkbox' %>
-</div>
+<%= render 'widgets/challenge_box' %>

@@ -1,10 +1,10 @@
 en:
-  welcome:
-    index:
+  widgets:
+    challenge_box:
       super_terms_html: |
         By selecting this checkbox, you agree that
         <a class="cronuts" href="%{cronuts_url}" target="_blank"
-         title="View cronuts" role="link">cronuts</a>
+         title="View cronuts in a new tab" role="link">cronuts</a>
         are better than
         <a class="donuts" href="%{donuts_url}" target="_blank"
-         title="View donuts" role="link">donuts</a>
+         title="View donuts in a new tab" role="link">donuts</a>
