@@ -1,6 +1,7 @@
 en:
   widgets:
     challenge_box:
+      widget_title: Cronut acceptance widget
       super_terms_html: |
         By selecting this checkbox, you agree that
         <a class="cronuts" href="%{cronuts_url}" target="_blank"
