@@ -2,4 +2,9 @@ en:
   welcome:
     index:
       super_terms_html: |
-        By selecting this checkbox, you agree that <a href="%{cronuts_url}" target="_blank">cronuts</a> are better than <a href="%{donuts_url}" target="_blank">donuts</a>
+        By selecting this checkbox, you agree that
+        <a class="cronuts" href="%{cronuts_url}" target="_blank"
+         title="View cronuts" role="link">cronuts</a>
+        are better than
+        <a class="donuts" href="%{donuts_url}" target="_blank"
+         title="View donuts" role="link">donuts</a>
