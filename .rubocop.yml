@@ -1,7 +1,13 @@
 Bundler/OrderedGems:
   Enabled: false
 
+Layout/AlignArguments:
+  Enabled: false
+
 Layout/EmptyLines:
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
   Enabled: false
 
 Layout/SpaceInsideArrayLiteralBrackets:
@@ -29,10 +35,16 @@ Style/ExpandPathArguments:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/IfUnlessModifier:
+  Enabled: false
+
 Style/MixinUsage:
   Enabled: false
 
 Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/RedundantBegin:
   Enabled: false
 
 Style/StderrPuts:
