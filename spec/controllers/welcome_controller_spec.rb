@@ -61,6 +61,10 @@ RSpec.describe WelcomeController, type: :controller do
       it 'returns nil when invalid' do
         expect(object.validate_url('google.com')).to be_nil
       end
+
+      it 'returns nil when malformed ' do
+        expect(object.validate_url('http_//invalid')).to be_nil
+      end
     end
   end
 end

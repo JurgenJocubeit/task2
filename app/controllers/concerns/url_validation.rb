@@ -17,7 +17,5 @@ module UrlValidation
     end
 
     nil # do nothing but don't kill the request
-  rescue URI::InvalidURIError
-    nil # do nothing but don't kill the request
   end
 end
