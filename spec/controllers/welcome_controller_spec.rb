@@ -1,17 +1,22 @@
 require 'rails_helper'
+require 'uri'
 
 RSpec.describe WelcomeController, type: :controller do
   context 'when welcome params are blank' do
     it 'sets @cronuts to the default value' do
       get :index
 
-      expect(assigns(:cronuts_url)).to eq 'https://upload.wikimedia.org/wikipedia/commons/8/8b/April_2016_Cronut%C2%AE_2_Burnt_Vanilla_Caramel_-_photo_by_Dominique_Ansel_Bakery.jpg'
+      expect(assigns(:cronuts_url)).to eq(URI.escape(
+        'https://upload.wikimedia.org/wikipedia/commons/8/8b/April_2016_Cronut%C2%' \
+        'AE_2_Burnt_Vanilla_Caramel_-_photo_by_Dominique_Ansel_Bakery.jpg'))
     end
 
     it 'sets @donuts to the default value' do
       get :index
 
-      expect(assigns(:donuts_url)).to eq 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/250px-Glazed-Donut.jpg'
+      expect(assigns(:donuts_url)).to eq(URI.escape(
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg' \
+        '/250px-Glazed-Donut.jpg'))
     end
   end
 
