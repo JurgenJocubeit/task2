@@ -41,4 +41,26 @@ RSpec.describe WelcomeController, type: :controller do
       expect(assigns(:donuts_url)).to eq(URI.escape('http://www.google.com'))
     end
   end
+
+  context 'when including UrlValidation concern' do
+    before do
+      class ExampleController < ApplicationController
+        include UrlValidation
+      end
+    end
+
+    after { Object.send :remove_const, :ExampleController }
+
+    let(:object) { ExampleController.new }
+
+    describe 'validate_url method yields expected result' do
+      it 'returns url when valid' do
+        expect(object.validate_url('http://google.com')).to eq('http://google.com')
+      end
+
+      it 'returns nil when invalid' do
+        expect(object.validate_url('google.com')).to be_nil
+      end
+    end
+  end
 end
