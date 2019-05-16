@@ -1,0 +1,48 @@
+<h1>Welcome!</h1>
+
+<p>This cronut acceptance widget is embeded in sites around the world as an iFrame. It's been hugefully successful but lately many users have wanted to use their own <strong>cronuts</strong> and <strong>donuts</strong> URL instead of the default ones used in the checkbox label.</p>
+
+<p>Your task is to allow <code>cronuts_url</code> and/or <code>donuts_url</code> query string parameters. If either are included in the widget URL (this page), the default link it represents should be overwritten with the value supplied.</p>
+
+<p>For example, if I supplied <code>http://localhost:3000?cronuts_url=https://google.com</code> then the <strong>cronuts</strong> link in the label below would lead to <code>https://google.com</code> instead of <code>https://upload.wikimedia.org/wikipedia/commons/8/8b/April_2016_Cronut%C2%AE_2_Burnt_Vanilla_Caramel_-_photo_by_Dominique_Ansel_Bakery.jpg</code> and the <strong>donuts</strong> link would remain unchanged from its default.
+
+<p>While you're at it, lets also make use of Rails I18n for the label text.</p>
+
+<h2>Guidelines</h2>
+<ul>
+  <li>Your solution must use Rails I18n for the label text</li>
+  <li>Use Git and commit as often as you think is necessary to properly tell your story</li>
+  <li>Write tests using RSpec proving that your solution works (TDD strongly encouraged)</li>
+  <li>Use whatever tools you'd like (gems, patterns, etc)</li>
+  <li>Engineer your solution as if there's a high chance it will be re-used in other widgets</li>
+  <li>Feel free to create new directories, classes, modules, etc...</li>
+  <li>Keep lines wrapped at 120 characters</li>
+  <li>Enjoy this odd challenge!</li>
+</ul>
+
+<h2>What we're looking for</h2>
+<ul>
+  <li>Coding style (tidyness &amp; legibility)</li>
+  <li>Abstractions</li>
+  <li>Testing practices</li>
+  <li>Security awareness</li>
+  <li>Commit journey</li>
+</ul>
+
+<h2>How to submit</h2>
+2 options:
+
+<ol>
+  <li>Upload to a public git repository on GitHub</li>
+  <li>Zip the entire project, including the <code>.git</code> folder</li>
+</ol>
+
+Finally email us with your link or zip file.
+
+<h2>Cronut acceptance widget</h2>
+<div class="challenge_box">
+  <%= label_tag 'terms_checkbox' do %>
+    <%= t '.super_terms_html', cronuts_url: @cronuts_url, donuts_url: @donuts_url %>
+  <% end %>
+  <%= check_box_tag 'terms_checkbox' %>
+</div>

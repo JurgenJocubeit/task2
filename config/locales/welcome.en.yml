@@ -1,0 +1,5 @@
+en:
+  welcome:
+    index:
+      super_terms_html: |
+        By selecting this checkbox, you agree that <a href="%{cronuts_url}" target="_blank">cronuts</a> are better than <a href="%{donuts_url}" target="_blank">donuts</a>
